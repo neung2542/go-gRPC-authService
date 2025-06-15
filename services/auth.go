@@ -82,7 +82,7 @@ func (s *AuthService) Login(ctx context.Context, req *pb.LoginRequest) (*pb.Logi
 
 	// Check if user is active
 	if !user.IsActive {
-		return nil, status.Errorf(codes.PermissionDenied, "account is deactivated")
+		return nil, status.Errorf(codes.PermissionDenied, "account is deactivated/deleted")
 	}
 
 	// Generate JWT token
@@ -186,12 +186,6 @@ func (s *AuthService) Register(ctx context.Context, req *pb.RegisterRequest) (*p
 
 	// Set the user ID from the insert result
 	user.ID = result.InsertedID.(primitive.ObjectID)
-	// Generate JWT token
-	// token, err := s.jwtService.GenerateToken(user.ID.Hex(), user.Email)
-	// if err != nil {
-	// 	return nil, status.Errorf(codes.Internal, "failed to generate token")
-	// }
-	// Convert user to protobuf
 	pbUser := &pb.User{
 		Id:        user.ID.Hex(),
 		Email:     user.Email,

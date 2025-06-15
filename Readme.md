@@ -7,6 +7,9 @@
 * Go 1.20+
 * Docker 
 
+## Architecture
+![Architecture](Architecture.png)
+
 
 ### Step 1: Clone and Install
 

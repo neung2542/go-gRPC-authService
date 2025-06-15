@@ -54,7 +54,7 @@ go run main.go
 }
 ```
 
-## 3. API Documentation
+## 2. API Documentation
 
 ### AuthService
 

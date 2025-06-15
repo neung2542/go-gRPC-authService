@@ -44,7 +44,7 @@ go run main.go
 ```json
 {
   "email": "user@example.com",
-  "password": "123456"
+  "password": "123456Aaa@"
 }
 ```
 
@@ -55,6 +55,11 @@ go run main.go
 {
   "token": "<paste_token_here>"
 }
+```
+In Authorization Add Bearer Token
+
+```bash
+Bearer "<paste_token_here>"
 ```
 
 ## 2. API Documentation

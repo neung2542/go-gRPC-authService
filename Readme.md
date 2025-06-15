@@ -172,6 +172,5 @@ message ListUsersResponse {
 
 ### TO ADD FEATURE
 
-1. **NAME/EMAIL FILTER**: filter name/email in ListUsersRequest
-2. **RESET PASSWORD**: able to reset password and Generate/validate reset tokens
+1. **RESET PASSWORD**: able to reset password and Generate/validate reset tokens
 

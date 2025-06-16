@@ -192,8 +192,7 @@ func BuildSearchFilter(nameFilter, emailFilter string) bson.M {
 		// Search in both first_name and last_name
 		nameRegex := bson.M{"$regex": nameFilter, "$options": "i"}
 		filter["$or"] = []bson.M{
-			{"first_name": nameRegex},
-			{"last_name": nameRegex},
+			{"name": nameRegex},
 		}
 	}
 
